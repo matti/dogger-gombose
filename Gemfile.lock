@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dogger-gombose (0.1.0)
+    dogger-gombose (0.1.1)
       main
 
 GEM
