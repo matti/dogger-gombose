@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'main'
+
+Main {
+  mode 'config' do
+    option 'services' do
+      argument_optional
+    end
+
+    def run
+      raise "err" unless params["services"].given
+
+      contents = YAML.load(File.read("docker-compose.yml"))
+      puts contents["services"].keys
+    end
+  end
+
+  def run
+    puts "err"
+    exit 1
+  end
+}
